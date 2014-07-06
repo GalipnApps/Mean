@@ -1,0 +1,122 @@
+<!doctype html>
+<html ng-app='projectmanageApp'>
+	<head>
+		<link rel="stylesheet" href="css/datepicker.css">
+		<link rel='stylesheet' href='css/bootstrap.css'/>
+		<link rel='stylesheet' href='css/bootstrap-theme.css'/>
+		<link rel='stylesheet' href='css/index_style.css'/>
+		<link rel="stylesheet" media="screen and (max-width: 767px)" href="css/mobile.css" />
+		<title>Project Management</title>
+	</head>
+	<body  ng-controller="loginpageController">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				
+			<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header pull-right links">
+					<a ng-href='#/home'><button class="btn btn-default "  id='loginOutBtn' ng-show='logout' ng-click='modify_logout()'>
+							Log Out
+					</button></a>
+					<span id="mobile_welcome_msg" class="hide" ng-show='mobile_welcome_msg'>Welcome {{loggedUser}}</span>
+					
+					<button class="btn btn-default mobile_login" data-toggle="modal" data-target="#myModal" id='loginBtn' ng-show='login' ng-click='signin_disable()' >
+					Login
+					</button>
+				</div>
+					<button type="button" id='mobile_menu_symbol' class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ng-show='menu'>
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					
+					</button>
+				
+				<a class="navbar-header navbar-brand" id="logo" href="#">PROJECT MANAGEMENT</a>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav ul_id">
+						<!-- <li class="ul_id"><a href="#" id='currentProjects'>Current Projects</a></li> -->
+						<li ng-show='menu'><a ng-href='#/home/projects' id='myProjects' class='menu_option'>My Projects</a></li>
+						<li class="dropdown ul_id" ng-show='menu'>
+							<a  class="dropdown-toggle ul_id" data-toggle="dropdown" id="admin">Admin <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a ng-href="#/home/manage_projects" id="manageProjects" class='menu_sub_option'>Manage projects</a></li>
+								<li><a ng-href="#/home/manage_users" id="manageUsers" class='menu_sub_option'>Manage users</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right ">
+						<li><p></p></li>
+						<span ng-show='welcome_message' class="msg hidden-xs">Welcome {{loggedUser}}</span>
+						<button class="btn btn-default" data-toggle="modal" data-target="#myModal" id='loginBtn' ng-show='login' ng-click='signin_disable()' >
+							Login
+						</button>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+
+		<ol class="ab-nav breadcrumb">
+			<li ng-repeat="breadcrumb in breadcrumbs.get() track by breadcrumb.path" ng-class="{ active: $last }">
+			  <a ng-if="!$last" ng-href="#{{ breadcrumb.path }}" ng-bind="breadcrumb.label" class="margin-right-xs"></a>
+			  <span ng-if="$last" ng-bind="breadcrumb.label"></span>
+			</li>
+		</ol>
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Sign In</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-vertical" id="loginForm">
+							<div id='login_alerts'></div>
+							<!-- Text input-->
+							<div class="form-group">
+								<label  for="Email">E-mail</label>
+								<input id="Email" name="Email" type="email" placeholder="admin@abc.com" class="form-control input-medium" required="" ng-keyup="check_empty_fields()">
+							</div>
+
+							<!-- Password input-->
+							<div class="form-group">
+								<label  for="password">Password</label>
+								<input id="password" name="password" type="password" placeholder="" class="form-control input-medium" required="" ng-keyup="check_empty_fields()">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<div class="form-group pull-right" id='formBtns'>
+							<label class="control-label" for="signIn"></label>
+							<button type="submit" class="btn btn-primary"  id="signIn" name="signIn">Sign In</button>
+							<button id="clear" name="clear" class="btn btn-default" type="reset">Clear</button>
+							<button id="cancel" name="cancel" data-dismiss="modal" class="btn btn-warning ">Cancel</button>
+
+						</div>
+					</div>
+				  
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div ng-view>
+			</div>
+		</div>
+
+		<script src='js/jquery-1.11.0.js'></script> <!--for jquery-->
+		<script src='js/bootstrap.js'></script> <!--for bootstrap-->
+		<script src='js/angular.min.js'></script> <!--for angular-->
+		<script src='js/angular-route.js'></script> <!--for angular route-->
+		<script src="js/datepicker.js"></script>
+		<script src='js/app.js'></script> 
+		<script src='js/ng-breadcrumbs.js'></script> 
+		<script src='js/controllers.js'></script> 
+	
+	</body>
+</html>

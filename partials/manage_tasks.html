@@ -1,0 +1,23 @@
+<div id="manageTasks"></div>
+<h2>Manage Tasks Page.</h2>
+
+<div id='tasksTable' class='table-responsive'>
+
+	<table class='table table-hover'>
+		<tr><th>TaskName_Sprint_ProjectName</th><th>Estimation</th><th>Remaining</th><th>Description</th><th>State</th><th>Assigned To</</th><th>Project Backlog Item</th></tr>
+		<tr  class='taskRow' ng-repeat='taskData in taskDataset' ng-class-odd="'odd'" ng-class-even="'even'">
+			<td id=''>{{taskData.TaskName_SprintProjectName}}</td>
+			<td>{{taskData.Estimation}}</td>
+			<td>{{taskData.Remaining}}</td>
+			<td>{{taskData.Description}}</td>
+			<td>{{taskData.State}}</td>
+			<td>{{taskData.AssignedTo}}</td>
+			<td>{{taskData.ProjectBackLogItem}}</td>
+		</tr>
+	</table>
+
+</div>
+
+<pre><a ng-href='#/home/projects/manage_sprints/manage_tasks/addTask'><button type="button" class="btn btn-primary" data-toggle="button" id='addTask'>New Task</button></a></pre>
+
+

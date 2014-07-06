@@ -1,0 +1,201 @@
+body{
+/* background-color:#f9f9f9; */
+background:url('../images/background.jpg') no-repeat;
+color:#000000;
+}
+.active1{
+background-color:#ce4d23;
+}
+
+#loginForm{
+	margin-left:20px;
+}
+
+#loginForm input{
+	width:40%;
+}
+#formBtns{
+	margin-right:30px;
+}
+#loginForm.ng-invalid.ng-dirty {
+	border: 1px solid red; 
+}
+#loginForm.ng-valid.ng-dirty { active1
+	border: 1px solid green;
+}
+#login{
+	margin-top:10px;
+	height:30px;
+}
+	
+/**********for "add projects" page***********/
+#projectForm,#projectSave{
+	margin-left:20px;
+	margin-right:20px;
+}
+#projectForm input,#projectForm  textarea,#projectForm  select{
+	/* width:60%; */
+}
+
+#projectForm label{
+	font-weight:normal;
+}
+#formBtns{
+	margin-right:30px;
+}
+#projectForm  table{
+	width:59%;
+	margin-left:0px;
+}
+.developer_table{
+	margin-left:20px;
+}
+.ProjectOwnerDiv{
+padding-left:-10px;
+}
+.userLabel{
+padding-left:0px;
+width:30%;
+}
+.removeItem{
+width:5px;
+/* padding-left:8px;
+margin-top:5px; */
+font-weight:bold;
+top:28px;
+right:0;
+position:absolute;
+/* color:red; */
+}
+
+.breadcrumb{
+	margin-top:-20px;
+}
+
+#loginBtn,#loginOutBtn{
+	margin-top:10px;
+	width:100px;
+	
+}
+#loginOutBtn{
+float:left;
+}
+button#loginBtn .btn-primary{
+background-color:#f9f9f9;}
+.msg{
+ margin-top:15px;
+ color:#ffffff;
+ margin:8px 10px 0px 0px;
+}
+#desktop_welcomeMsg{
+padding-top:10px;
+float:right;
+}
+.mobile_login{
+display:none;
+}
+/**********for "add User" page***********/
+#userForm{
+	margin-left:20px;
+}
+#userForm input{
+	/*width:40%;*/
+}
+#formBtns{
+	margin-right:30px;
+}
+input#admin{
+	width:0%;
+}
+/**********for "new backlog item" page***********/
+
+#backlogForm{
+	margin-left:40px;
+}
+#backlogForm input,#backlogForm textarea{
+	width:60%;
+}
+input#projectEstimation,input#projectPriority{
+	width:35%;
+}
+
+/**********for "new Sprint" page***********/
+#newSprint{
+	margin-left:30px;
+	margin-top:30px;
+}
+#newSprint legend{
+	padding-bottom:10px;
+}
+#newSprint input{
+	/* width:40%; */
+}
+#newSprint button{
+	margin-left:15px;
+}
+input#sprintName{
+		/* width:80%; */
+}
+.formBody{
+	padding-top:20px;
+}
+.breadcrumb {
+	background-color:#dfdfdf;
+}
+.container-fluid{
+background-color:#464646;
+}
+.container-fluid:active{
+background-color:#28415b;
+}
+a#logo{
+color:#ffffff;
+float:left;
+}
+a#logo:hover{
+color:#ce4d23;
+}
+#bs-example-navbar-collapse-1{
+float:left;
+width:72%;
+}
+#currentProjects ,#admin,#myProjects{
+color:#ffffff;
+}
+#admin:active{
+background-color:#ce4d23;
+}
+#currentProjects:hover,#manageUsers:hover,#manageProjects:hover,#admin:hover,#myProjects:hover{
+background-color:#ce4d23;
+}
+
+.table{
+background-color:#ffffff;
+}
+h2{
+color:#ce4d23;
+text-align:center;
+margin-bottom:20px;
+}
+ .table th{
+background-color:#464646;
+color:#ffffff;
+font-size:1.2em;
+}
+
+.table th:hover{
+background-color:#464646;
+color:#ffffff;
+font-size:1.2em;
+} 
+.navbar-default .navbar-nav > .open > a{background-color:#ce4d23;}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus 
+{
+background-color:#ce4d23;
+}
+a#admin{
+cursor:pointer;
+}
+.closeButn{
+position:relative;
+}

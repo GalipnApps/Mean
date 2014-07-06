@@ -1,0 +1,15 @@
+<div id="my_projects"></div>
+<h2>Projects Page..</h2>
+<div id='projectTable' class='table-responsive'>
+	<table class='table table-hover'>
+		<tr><th>Name</th><th>Description</th><th>My Role[s]</th><th>Tools</th></tr>
+		<tr class='projectRow' ng-repeat="projDetail in projectDetails" ng-class-odd="'odd'" ng-class-even="'even'">
+			<td id="proj">{{projDetail.ProjectName}}</td>
+			<td>{{projDetail.Description}}</td>
+			<td>[SM]</td>
+			<td><a href="" id="show_backlog" ng-click='show_backlog($index)'>Project Backlog</a><a href="" id="show_sprints" ng-click='show_sprints($index)'>Sprints</a></td>
+		</tr>
+	</table>
+
+
+</div>

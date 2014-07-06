@@ -1,0 +1,10 @@
+{
+  "name": "Project_Management",
+  "description": "managing the projects and the users",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~4.0.0",
+    "mongodb": "*",
+    "mongoose": "*"
+  }
+}

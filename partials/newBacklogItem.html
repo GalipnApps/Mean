@@ -1,0 +1,51 @@
+<legend>Project Backlog Item</legend>
+	<div id='new_backlog_alert'></div>
+
+<form class="form-horizontal" id="backlogForm">
+	<fieldset>
+
+	<!-- Project Backlog -->
+	
+	<!-- Backlog Name-->
+	<div class="form-group">
+		<label class="form-label" for="projectBacklogName">Name</label>
+		<div class="controls">
+		<input id="projectBacklogName" name="projectBacklogName" type="text" placeholder="" class="input-xlarge form-control" ng-model='newBacklog.name'>   
+		</div>
+	</div>
+
+	<!-- Backlog Description -->
+	<div class="form-group">
+	  <label class="form-label" for="userStory">User Story</label>
+	  <div class="controls">                     
+		<textarea id="userStory" name="userStory form-control" rows="10" cols="20" ng-model='newBacklog.description'></textarea>
+	  </div>
+	</div>
+
+	<!-- Backlog Priority-->
+	<div class="form-group">
+		<label class="form-label" for="projectPriority">Priority</label>
+		<div class="controls">
+			<input id="projectPriority" name="projectPriority" type="text" placeholder="" class="input-xlarge form-control" ng-model='newBacklog.priority'>
+		</div>
+	</div>
+
+	<!-- Backlog Estimation-->
+	<div class="form-group">
+		<label class="form-label" for="projectEstimation">Estimation</label>
+		<div class="controls">
+			<input id="projectEstimation" name="projectEstimation" type="text" placeholder="" class="input-xlarge form-control"  ng-model='newBacklog.estimation'>  
+		</div>
+	</div>
+
+	<!-- Buttons-->
+	<div class="form-group">
+	  <label class="form-label" for="userSaveBtn"></label>
+	  <div class="controls">
+		<button id="userSaveBtn" name="userSaveBtn" class="btn btn-info" ng-click='saveBacklog(newBacklog)'>Save</button>
+		<button id="userRevertBtn" name="userRevertBtn" type='reset' class="btn btn-warning">Revert Changes</button>
+	  </div>
+	</div>
+
+	</fieldset>
+</form>

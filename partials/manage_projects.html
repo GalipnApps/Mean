@@ -1,0 +1,15 @@
+
+<h2>Manage Projects Page.</h2>
+<div id='project_add__alert'></div><!--ng-show='id_msg'-->
+<div id='tablecontent' class='table-responsive' >
+	<table class='table table-hover'>
+		<tr><th>Project Name</th><th>Description</th></tr>
+		<tr ng-repeat='project in projects_list' ng-class-odd="'odd'" ng-class-even="'even'">
+			<td>{{project.ProjectName}}</td>
+			<td>{{project.Description}}</td>
+		</tr>
+	</table>
+</div>
+
+<!-- ng-hide='ack_show' -->
+<a ng-href='#/home/manage_projects/addProject'><button type="button" class="btn btn-default" data-toggle="button" id='addProject'>New Project</button></a>

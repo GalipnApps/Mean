@@ -1,0 +1,16 @@
+<div id="manageUsers"></div>
+<h2>Manage Users Page.</h2>
+<div id='usersTable' class='table-responsive'>
+<table class='table table-hover'>
+<tr><th>Email</th><th>First Name</th><th>Last Name</th><th></th></tr>
+<tr ng-repeat='userdetail in all_users_data' ng-class-odd="'odd'" ng-class-even="'even'" class='userRow'>
+	<td id='userEmail'>{{userdetail.Email}}</td>
+	<td>{{userdetail.FirstName}}</td>
+	<td>{{userdetail.LastName}}</td>
+	<td><button class="btn btn-danger" value="Remove" id="removeUser" ng-click='removeUser($index)'>Remove</button></td>
+</tr>
+</table>
+</div>
+
+
+<a ng-href='#/home/manage_users/addUser'><button type="button" class="btn btn-default" data-toggle="button" id='addUser'>New User</button></a>

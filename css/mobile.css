@@ -1,0 +1,58 @@
+ #mobile_welcome_msg{
+color:#ffffff;
+margin-right:42px;
+float:right;
+width:20px;
+font-size:1em;
+} 
+.msg,#mobile_menu_symbol{
+ display:none;
+}
+#mobile_menu_symbol{
+float:left;
+}
+.mobile_login{
+display:inline;
+}
+#currentProjects ,#manageUsers,#manageProjects,#admin,#myProjects{
+color:#ffffff;
+}
+#currentProjects:hover,#manageUsers:hover,#manageProjects:hover,#admin:hover,#myProjects:hover{
+background-color:#ce4d23;
+}
+a#logo{
+float:left;
+width:50px;
+margin-top:-10px;
+
+}
+#bs-example-navbar-collapse-1{
+float:none;
+width:auto;
+margin-top:55px;
+}
+.navbar-header.pull-right.links{
+width:40%;
+}
+.hide{
+display:none;
+}
+.visible-xs{
+display:inline !important;
+float:left;
+}
+#loginBtn{
+width:80px;
+margin-left:30px;
+}
+.container-fluid{
+padding-bottom:20px;
+padding-top:20px;
+}
+#loginOutBtn{
+float:right;
+width:70px;
+}
+.forLength {
+width:100%;
+}

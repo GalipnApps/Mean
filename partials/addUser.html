@@ -1,0 +1,80 @@
+<div class="row ">
+<div class='col-md-6'>
+		<form class="form-horizontal" id="userForm">
+		<fieldset>
+
+		<!-- Form Name -->
+		<legend>User</legend>
+		<!--Alerts-->
+		<div id='new_user_alert' ng-show='new_user_alert'><div class="alert alert-danger"></div></div>
+
+
+		<!-- Email-->
+		<div class="form-group forLength col-xs-12 col-sm-12 col-md-12">
+		  <label class="form-label" for="userEmail">E-mail</label>
+		  <div class="controls">
+			<input id="userEmail" name="userEmail" type="text" placeholder="" class="form-control input-xlarge" required="" ng-model='newuser.email'>
+			
+		  </div>
+		</div>
+
+		<!-- Last Name-->
+		<div class="form-group col-xs-12 col-sm-12 col-md-12">
+		  <label class="form-label" for="lastName">Last Name</label>
+		  <div class="controls">
+			<input id="lastName" name="lastName" type="text" placeholder="" class="form-control input-xlarge" required="" ng-model='newuser.lastname'>
+			
+		  </div>
+		</div>
+
+		<!-- First Name-->
+		<div class="form-group  col-xs-12 col-sm-12 col-md-12">
+		  <label class="form-label" for="firstName">First Name</label>
+		  <div class="controls">
+			<input id="firstName" name="firstName" type="text" placeholder="" class="form-control input-xlarge" required="" ng-model="newuser.firstname">
+			
+		  </div>
+		</div>
+
+		<!-- Password input-->
+		<div class="form-group  col-xs-12 col-sm-12 col-md-12">
+		  <label class="form-label" for="userPassword">Password </label>
+		  <div class="controls">
+			<input id="userPassword" name="userPassword" type="password" placeholder="" class="form-control input-xlarge" required="" ng-model="newuser.password">
+			
+		  </div>
+		</div>
+
+		<!-- Password input-->
+		<div class="form-group col-xs-12 col-sm-12 col-md-12">
+		  <label class="form-label" for="passwordRepeat">Password(repeat)</label>
+		  <div class="controls">
+			<input id="passwordRepeat" name="passwordRepeat" type="password" placeholder="" class="form-control input-xlarge" required="" ng-model="newuser.passwordRepeat">
+			
+		  </div>
+		</div>
+
+		<!-- Admin -->
+		<!-- <div class="form-group col-xs-12 col-sm-12 col-md-12">
+		
+		  <div class="controls">
+			<label class="checkbox" for="admin">
+			  <input type="checkbox" name="" id="admin" value="Admin">
+			  Admin
+			</label>
+		  </div>
+		</div> -->
+
+		<!-- Buttons -->
+		<div class="form-group col-xs-12 col-sm-12 col-md-12">
+		  <label class="form-label" for="userSaveBtn"></label>
+		  <div class="controls">
+			 <a ng-click='save_user(newuser)'><button id="userSaveBtn" name="userSaveBtn" class="btn btn-info">Save</button></a>
+			<button id="userRevertBtn" name="userRevertBtn" type='reset' class="btn btn-warning">Revert Changes</button>
+		  </div>
+		</div>
+
+		</fieldset>
+		</form>
+	</div>
+</div>

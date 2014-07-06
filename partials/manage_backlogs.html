@@ -1,0 +1,18 @@
+<div id="manageBacklogs"></div>
+<h2>Manage Backlogs Page..</h2>
+<div id='backlogTable'>
+<table class='table table-hover' class='table-responsive'>
+		<tr><th>ProjectName_ProjectBacklog</th><th>Description</th><th>Priority</th><th>Estimation</th></tr>
+		<tr ng-repeat='backlogdata in BacklogDataSet' ng-class-odd="'odd'" ng-class-even="'even'">
+			<td>{{backlogdata.ProjectName_ProjectBacklog}}</td>
+			<td>{{backlogdata.Description}}</td>
+			<td>{{backlogdata.Priority}}</td>
+			<td>{{backlogdata.Estimation}}</td>
+		</tr>
+	</table>
+
+</div>
+
+
+<pre><a ng-href='#/home/projects/manage_backlogs/addBacklog'><button type="button" class="btn btn-primary" data-toggle="button" id='addBacklog'>New Backlog</button></a></pre>
+

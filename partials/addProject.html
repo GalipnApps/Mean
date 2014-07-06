@@ -1,0 +1,76 @@
+<h2>Add Project</h2>
+<div  ng-show='duplicate_project' id='duplicate_alert'></div>
+<div ng-show="addProject_Alert" class="alert alert-danger">Please enter all details</div>
+
+<form class="form-vertical" id="projectForm">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Project</legend>
+
+<!-- Text input-->
+<div class="form-group col-xs-12 col-sm-12 col-md-6">
+  <label class="form-label" for="projectName">Name</label>
+  <div class="controls">
+    <input id="projectName" name="projectName" type="text" placeholder="" class="form-control input-xlarge" ng-model='newproject.name'>   
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group col-xs-12 col-sm-12 col-md-6 ProjectOwnerDiv">
+  <label class="form-label" for="projectOwn">Project Owner</label>
+  <div class="controls">
+   <!--  <select id="projectOwn" name="projectOwn" class="form-control input-xlarge" ng-model='newproject.projectowner'>
+      <option>--choose--</option>
+      <option>Option one</option>
+      <option>Option two</option>
+    </select> -->
+	 <select id="projectOwn" name="projectOwn" class="form-control input-xlarge" ng-model='newproject.projectowner'>
+		<option ng-repeat='devData in devDataSet'>{{devData.FirstName}}   {{devData.LastName}}</option>
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group col-xs-12 col-sm-12 col-md-6">
+  <label class="form-label" for="projectDescription">Descriptiom</label>
+  <div class="controls">                     
+    <textarea id="projectDescription" name="projectDescription" class="form-control" rows="10" cols="20" ng-model='newproject.description'></textarea>
+  </div>
+</div>
+
+<!--developer table.-->
+<div id='test'></div>
+	<div class="col-xs-12 col-sm-12 col-md-6">
+	<table class=" form-group table table-bordered developer_table ">
+	<tr><th>Development Team <button id="addUser" name="addUser" class="btn btn-default pull-right" ng-click='addItem()'>add</button></th></tr>
+	<tr id='developer'  ng-repeat='userSet in userSets.developers'><td>
+	<div class="form-group closeButn">
+	 
+	  <div class="controls userSelection col-xs-12 col-sm-12 col-md-6">
+					<label class="form-label userLabel" for="user">Developer</label>
+					
+					<select id="user" name="user" class="form-control input-xlarge ng-pristine ng-valid chooseDev " ng-model='userSet.developer' >
+					  <option ng-repeat='devData in devDataSet'>{{devData.FirstName}}   {{devData.LastName}}</option>
+					</select>
+					 <a  class='removeItem' href ng-click="removeItem($index)">X</a>
+		<!-- {{userSets.developers}} -->
+	  </div>
+	</div>
+	</td>
+	</tr>
+	</table>
+	</div>
+
+
+<!-- Button (Double) -->
+<div class="form-group col-xs-12 col-sm-12 col-md-6">
+  <label class="form-label" for="projectSave"></label>
+  <div class="controls">
+   <a ng-click='save_project(newproject,userSets)'> <button id="projectSave" name="projectSave" class="btn btn-info" >Save</button></a>
+    <button id="projectRevert" name="projectRevert" type='reset' class="btn btn-warning">Revert Changes</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

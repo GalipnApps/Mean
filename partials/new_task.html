@@ -1,0 +1,88 @@
+<div ng-show="addProject_Alert" class="alert alert-danger">Please enter all details</div>
+
+<form class="form-vertical" id="projectForm">
+<fieldset>
+<legend>New Task</legend>
+
+<!--Alerts-->
+<div id='new_task_alert' ng-show='new_task_alert'><div class="alert alert-danger"></div></div>
+
+
+<!-- Text input for NAME field-->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="taskName">Name</label>
+  <div class="controls">
+    <input id="taskName" name="taskName" type="text" placeholder="TaskName" class="form-control input-xlarge" ng-model='newTask.TaskName_SprintProjectName'>   
+  </div>
+</div>
+<!-- Text input for Estimation field-->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="estimation">Estimation</label>
+  <div class="controls">
+    <input id="estimation" name="estimation" type="text" placeholder="in Hours" class="form-control" ng-model='newTask.Estimation'>   
+  </div>
+</div>
+
+<!-- Product Backlog item selection -->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="product_backlog">Product Backlog item</label>
+  <div class="controls">
+    <select id="product_backlog" name="product_backlog" class="form-control input-xlarge" ng-model='newTask.ProjectBackLogItem'>
+      <option>--choose--</option>
+      <option>Backlog-1</option>
+      <option>Backlog-2</option>
+	  <option>Backlog-3</option>
+    </select>
+  </div>
+</div>
+<!-- Remaining field-->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="remaining">Remaining</label>
+  <div class="controls">
+    <input id="remaining" name="remaining" type="text" placeholder="" class="form-control" ng-model='newTask.Remaining'>   
+  </div>
+</div>
+<!-- Description field-->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="projectDescription">Description</label>
+  <div class="controls">                     
+    <textarea id="projectDescription" name="projectDescription" class="form-control" rows="10" cols="30" ng-model='newTask.Description'></textarea>
+  </div>
+</div>
+
+<!-- State change field -->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="state_update">State</label>
+  <div class="controls">                     
+    <select id="state_update" name="state_update" class="form-control" ng-model='newTask.State'>
+      <option>--choose--</option>
+      <option>TO DO</option>
+      <option>DOING</option>
+	  <option>NO RESOURCES</option>
+    </select>
+  </div>
+</div>
+<!-- Assigned to field-->
+<div class="form-group col-xs-6">
+  <label class="form-label" for="assigned">Assigned to</label>
+  <div class="controls">                     
+    <select id="assigned" name="assigned" class="form-control input-xlarge" ng-model='newTask.AssignedTo'>
+      <option>--choose--</option>
+      <option>project 1</option>
+      <option>project 2</option>
+	  <option>project 3</option>
+    </select>
+  </div>
+</div>
+
+<!-- Save Button -->
+<div class="form-group col-xs-12">
+  <label class="form-label" for="saveTask"></label>
+  <div class="controls">
+   <a > <button id="saveTask" name="saveTask" class="btn btn-primary" ng-click='saveTask(newTask)'>Save</button></a>
+    <button id="projectRevert" type='reset' name="projectRevert" class="btn btn-warning" >Revert Changes</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

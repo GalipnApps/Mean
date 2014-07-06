@@ -1,0 +1,56 @@
+	<form class="form-vertical" id='newSprint'>
+	<fieldset>
+	
+	<!-- Form Name -->
+	<legend>Sprint</legend>
+	
+	<!--Alerts-->
+	<div id='new_sprint_alert' ng-show='new_sprint_alert'><div class="alert alert-danger"></div></div>
+
+	
+	<div class='formBody'>
+		<!-- Sprint Name-->
+		<div class="form-group col-xs-6">
+		  <label class="form-label" for="sprintName">Name</label>
+		  <div class="controls">
+			<input id="sprintName" name="sprintName" type="text" placeholder="" class="form-control input-xlarge" required="" ng-model='newSprint.name'>
+			
+		  </div>
+		</div>
+		<!-- Start Date-->
+		<div class="form-group col-xs-6">
+		  <label class="form-label" for="startDate">Start Date</label>
+		  <div class="hero-unit">
+			<input id="startDate" name="startDate" type="text" placeholder="click to show datepicker" class="form-control input-xlarge" required="" ng-model='newSprint.startDate'>
+			
+		  </div>
+		</div>
+
+		<!-- Capacity-->
+		<div class="form-group col-xs-6">
+		  <label class="form-label" for="sprintCapacity">Capacity</label>
+		  <div class="controls">
+			<input id="sprintCapacity" name="sprintCapacity" type="text" placeholder="" class="form-control input-xlarge" required="" ng-model='newSprint.capacity'>
+			
+		  </div>
+		</div>
+		
+		<!-- End Date-->
+		<div class="form-group col-xs-6">
+		  <label class="form-label" for="endDate">End Date</label>
+		 <div class="hero-unit">
+			<input id="endDate" name="endDate" type="text" placeholder="click to show datepicker" class="form-control input-xlarge" required="" ng-model='newSprint.endDate'>
+			
+		 </div>
+		</div>
+		<!-- Button (Double) -->
+		<div class="control-group">
+		  <label class="control-label" for="sprintSave"></label>
+		  <div class="controls">
+			<button id="sprintSave" name="sprintSave" class="btn btn-primary" ng-click='saveSprint(newSprint)'>Save</button>
+			<button id="sprintRevert" name="sprintRevert" type='reset' class="btn btn-warning">Revert Changes</button>
+		  </div>
+		</div>
+	</div>
+		</fieldset>
+	</form>

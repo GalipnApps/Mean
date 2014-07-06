@@ -1,0 +1,18 @@
+<div id="manageSprints"></div>
+<h2>Manage Sprints Page.</h2>
+<div id='sprintTable'>
+	<table class='table table-hover' class='table-responsive'>
+		<tr><th>Name</th><th>Start Date</th><th>End Date</th><th>Status</th><th>Tasks</th></tr>
+		<tr class='sprintRow' ng-repeat='sprintData in sprintDataset' ng-class-odd="'odd'" ng-class-even="'even'">
+			<td id='sprintproj'>{{sprintData.Sprint_ProjectName}}</td>
+			<td>{{sprintData.StartDate}}</td>
+			<td>{{sprintData.EndDate}}</td>
+			<td>{{sprintData.Status}}</td>
+			<td><a><button value='task'  ng-click='show_tasks($index)'>TASK</button></a></td>
+		</tr>
+	</table>
+
+</div>
+
+<!-- <a ng-href='#/addTask'><button value='task' class='add_task'>TASK</button></a> -->
+<pre><a ng-href='#/home/projects/manage_sprints/addSprint'><button type="button" class="btn btn-primary" data-toggle="button" id='addSprint'>New Sprint</button></a></pre>

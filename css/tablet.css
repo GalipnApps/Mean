@@ -1,0 +1,10 @@
+#bs-example-navbar-collapse-1{
+float:left;
+}
+a#logo{
+float:left;
+width:150px;
+}
+.container-fluid{
+padding-bottom:10px;
+}
